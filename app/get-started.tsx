@@ -1,11 +1,11 @@
 import { useRouter } from "expo-router";
 import React, { useEffect, useRef } from "react";
 import {
-    Animated,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Animated,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 export default function GetStarted() {
@@ -40,10 +40,10 @@ export default function GetStarted() {
           },
         ]}
       >
-        <Text style={styles.title}>Welcome 👋</Text>
+        <Text style={styles.title}>Welcome Guys👋</Text>
         <Text style={styles.subtitle}>
-          This application showcases my profile, education, and experience in a
-          clean and modern way.
+          This application showcases my profile, education, and experience as a
+          student. Feel free to explore and learn more about me!
         </Text>
 
         <TouchableOpacity

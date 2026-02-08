@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import {
+  Image,
   Pressable,
   SafeAreaView,
   ScrollView,
@@ -11,6 +12,8 @@ import {
 import ScreenTransition from "../../components/ScreenTransition";
 
 export default function Profile() {
+  const profileImage = require("../../assets/images/idcard/profile.jpg");
+
   return (
     <ScreenTransition style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
@@ -31,20 +34,22 @@ export default function Profile() {
           <View style={styles.profileHeader}>
             <View style={styles.avatarWrap}>
               <View style={styles.avatarCircle}>
-                <Ionicons name="person" size={36} color="#8A8F9C" />
+                <Image source={profileImage} style={styles.avatarImage} />
               </View>
               <View style={styles.avatarEdit}>
                 <Ionicons name="pencil" size={12} color="#FFFFFF" />
               </View>
             </View>
-            <Text style={styles.profileName}>Nama Mahasiswa</Text>
-            <Text style={styles.profileMeta}>Program Studi • ID: 2024XXXX</Text>
+            <Text style={styles.profileName}>Awuy, Kharis Neville</Text>
+            <Text style={styles.profileMeta}>
+              Teknik Informatika • NIM : 105022210116
+            </Text>
             <View style={styles.badgeRow}>
               <View style={styles.badgePrimary}>
                 <Text style={styles.badgePrimaryText}>ACTIVE</Text>
               </View>
               <View style={styles.badgeSecondary}>
-                <Text style={styles.badgeSecondaryText}>SEM 5</Text>
+                <Text style={styles.badgeSecondaryText}>SEM 7</Text>
               </View>
             </View>
           </View>
@@ -57,7 +62,7 @@ export default function Profile() {
               </View>
               <View>
                 <Text style={styles.infoTitle}>FULL NAME</Text>
-                <Text style={styles.infoValue}>Nama Lengkap</Text>
+                <Text style={styles.infoValue}>Kharis Neville Awuy</Text>
               </View>
             </View>
             <View style={styles.divider} />
@@ -67,7 +72,7 @@ export default function Profile() {
               </View>
               <View>
                 <Text style={styles.infoTitle}>POB / DOB</Text>
-                <Text style={styles.infoValue}>Kota, Tanggal Lahir</Text>
+                <Text style={styles.infoValue}>Lembean, 12 November 2004</Text>
               </View>
             </View>
             <View style={styles.divider} />
@@ -77,17 +82,39 @@ export default function Profile() {
               </View>
               <View>
                 <Text style={styles.infoTitle}>RELIGION</Text>
-                <Text style={styles.infoValue}>Agama</Text>
+                <Text style={styles.infoValue}>Kristen Protestan</Text>
               </View>
             </View>
             <View style={styles.divider} />
             <View style={styles.infoRow}>
               <View style={[styles.infoIcon, styles.infoIconPink]}>
-                <Ionicons name="male-female" size={18} color="#F1498E" />
+                <Ionicons name="male-female" size={18} color="#6280d7" />
               </View>
               <View>
                 <Text style={styles.infoTitle}>GENDER</Text>
-                <Text style={styles.infoValue}>Gender</Text>
+                <Text style={styles.infoValue}>Laki-laki</Text>
+              </View>
+            </View>
+
+            <View style={styles.divider} />
+            <View style={styles.infoRow}>
+              <View style={[styles.infoIcon, styles.infoIconPink]}>
+                <Ionicons name="call-outline" size={18} color="#6280d7" />
+              </View>
+              <View>
+                <Text style={styles.infoTitle}>CONTACT</Text>
+                <Text style={styles.infoValue}>+62 821 5676 8703</Text>
+              </View>
+            </View>
+
+            <View style={styles.divider} />
+            <View style={styles.infoRow}>
+              <View style={[styles.infoIcon, styles.infoIconPink]}>
+                <Ionicons name="mail-outline" size={18} color="#6280d7" />
+              </View>
+              <View>
+                <Text style={styles.infoTitle}>EMAIL</Text>
+                <Text style={styles.infoValue}>awuyneville@gmail.com</Text>
               </View>
             </View>
           </View>
@@ -95,8 +122,14 @@ export default function Profile() {
           <Text style={styles.sectionLabel}>ABOUT STUDENT</Text>
           <View style={styles.card}>
             <Text style={styles.aboutText}>
-              Deskripsi singkat tentang mahasiswa. Tulis minat, aktivitas, dan
-              informasi penting lainnya di sini.
+              I am an Informatics Engineering student with an interest in
+              technology, AI and now i learn to make an application development.
+              I enjoy learning new concepts related to software and information
+              systems, and I am motivated to continuously improve my skills
+              through academic and organizational activities. Apart from that, I
+              also have an interest in sports where I like playing basketball,
+              futsal and even badminton and so on. Which makes my hobby very
+              useful for me.
             </Text>
           </View>
 
@@ -107,9 +140,10 @@ export default function Profile() {
                 <Ionicons name="school" size={18} color="#10B981" />
               </View>
               <View>
-                <Text style={styles.infoValueStrong}>Faculty / Program</Text>
-                <Text style={styles.infoValue}>Informatics Engineering</Text>
-                <Text style={styles.infoSubtle}>Class of 20XX</Text>
+                <Text style={styles.infoValueStrong}>
+                  Fakultas Ilmu Komputer / Teknik Informatika
+                </Text>
+                <Text style={styles.infoSubtle}>Angakatan 2022</Text>
               </View>
             </View>
             <View style={styles.divider} />
@@ -119,7 +153,7 @@ export default function Profile() {
               </View>
               <View>
                 <Text style={styles.infoValueStrong}>Current GPA</Text>
-                <Text style={styles.infoValue}>0.00 / 4.00</Text>
+                <Text style={styles.infoValue}>3.45 / 4.00</Text>
               </View>
             </View>
           </View>
@@ -140,7 +174,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingHorizontal: 18,
     paddingTop: 10,
-    paddingBottom: 30,
+    paddingBottom: 128,
   },
   topBar: {
     flexDirection: "row",
@@ -186,6 +220,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.08,
     shadowRadius: 8,
     elevation: 4,
+    overflow: "hidden",
+  },
+  avatarImage: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
   },
   avatarEdit: {
     position: "absolute",

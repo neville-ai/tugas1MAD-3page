@@ -1,123 +1,119 @@
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import ScreenTransition from "../../components/ScreenTransition";
 
 const education = () => {
   return (
     <ScreenTransition style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
-      <ScrollView
-        contentContainerStyle={styles.contentContainer}
-        showsVerticalScrollIndicator={false}
-      >
-        <View style={styles.headerRow}>
-          <Text style={styles.headerTitle}>Riwayat Pendidikan</Text>
-          <View style={styles.headerIcon}>
-            <Ionicons name="school" size={18} color="#5B5FEF" />
+        <ScrollView
+          contentContainerStyle={styles.contentContainer}
+          showsVerticalScrollIndicator={false}
+        >
+          <View style={styles.headerRow}>
+            <Text style={styles.headerTitle}>Riwayat Pendidikan</Text>
+            <View style={styles.headerIcon}>
+              <Ionicons name="school" size={18} color="#5B5FEF" />
+            </View>
           </View>
+
+          <View style={styles.timelineWrap}>
+            <View style={styles.timelineLine} />
+
+            <View style={styles.timelineItem}>
+              <View style={[styles.timelineIcon, styles.timelineIconSolid]}>
+                <Ionicons name="school" size={16} color="#FFFFFF" />
+              </View>
+              <View style={styles.card}>
+                <View style={styles.cardHeader}>
+                  <View style={styles.tagPrimary}>
+                    <Text style={styles.tagPrimaryText}>PERGURUAN TINGGI</Text>
+                  </View>
+                  <Text style={styles.yearText}>2022 - NOW</Text>
+                </View>
+                <Text style={styles.cardTitle}>Universitas Klabat</Text>
+                <Text style={styles.cardSubtitle}>Teknik Informatika</Text>
+                <Text style={styles.cardDesc}>
+                  Mahasiswa aktif semester 7 Fakultas Ilmu Komputer dengan
+                  program studi Teknik Informatika yang penuh dengan antusiasme
+                  terhadap pengembangan perangkat lunak dan teknologi terbaru.
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.timelineItem}>
+              <View style={styles.timelineIcon}>
+                <Ionicons name="book" size={16} color="#5B5FEF" />
+              </View>
+              <View style={styles.card}>
+                <View style={styles.cardHeader}>
+                  <View style={styles.tagNeutral}>
+                    <Text style={styles.tagNeutralText}>SMA</Text>
+                  </View>
+                  <Text style={styles.yearText}>2019 - 2022</Text>
+                </View>
+                <Text style={styles.cardTitle}>SMA Negeri 1 Airmadidi</Text>
+                <Text style={styles.cardSubtitle}>Jurusan IPA (Sains)</Text>
+                <Text style={styles.cardDesc}>
+                  Aktif dalam OSIS dan ekstrakurikuler basket. Pernah mengikuti
+                  lomba basket antar sekolah. Memiliki minat kuat dalam belajar
+                  teknologi.
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.timelineItem}>
+              <View style={styles.timelineIcon}>
+                <Ionicons name="create" size={16} color="#5B5FEF" />
+              </View>
+              <View style={styles.card}>
+                <View style={styles.cardHeader}>
+                  <View style={styles.tagNeutral}>
+                    <Text style={styles.tagNeutralText}>SMP</Text>
+                  </View>
+                  <Text style={styles.yearText}>2016 - 2019</Text>
+                </View>
+                <Text style={styles.cardTitle}>SMP Negeri 2 Airmadidi</Text>
+                <Text style={styles.cardDesc}>
+                  Masa dimana bermain main dengan teman-teman sangat
+                  menyenangkan. Ikut dalam kegiatan pramuka dan ekstrakurikuler
+                  basket. Banyak mengikuti lomba pramuka dan basket antar
+                  kabupaten
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.timelineItem}>
+              <View style={styles.timelineIcon}>
+                <Ionicons name="clipboard" size={16} color="#5B5FEF" />
+              </View>
+              <View style={styles.card}>
+                <View style={styles.cardHeader}>
+                  <View style={styles.tagNeutral}>
+                    <Text style={styles.tagNeutralText}>SD</Text>
+                  </View>
+                  <Text style={styles.yearText}>2010 - 2016</Text>
+                </View>
+                <Text style={styles.cardTitle}>SD Negeri Tumaluntung</Text>
+                <Text style={styles.cardDesc}>
+                  Masa-masa indah dimana belajar membaca, menulis, dan berhitung
+                  sangat mudah dan masih belum ada pikiran soal masa depan.
+                  Nilai ketiga tertinggi se-angkatan. Kelas 6 juara 1 lomba mata
+                  pelajaran Bahasa Indonesia tingkat kecamatan.
+                </Text>
+              </View>
+            </View>
+          </View>
+
+          <Text style={styles.quoteText}>
+            "Pendidikan adalah tiket ke masa depan."
+          </Text>
+        </ScrollView>
+
+        <View style={styles.fab}>
+          <Ionicons name="school" size={20} color="#FFFFFF" />
         </View>
-
-        <View style={styles.timelineWrap}>
-          <View style={styles.timelineLine} />
-
-          <View style={styles.timelineItem}>
-            <View style={[styles.timelineIcon, styles.timelineIconSolid]}>
-              <Ionicons name="school" size={16} color="#FFFFFF" />
-            </View>
-            <View style={styles.card}>
-              <View style={styles.cardHeader}>
-                <View style={styles.tagPrimary}>
-                  <Text style={styles.tagPrimaryText}>PERGURUAN TINGGI</Text>
-                </View>
-                <Text style={styles.yearText}>2019 - 2023</Text>
-              </View>
-              <Text style={styles.cardTitle}>
-                Universitas Teknologi Nasional
-              </Text>
-              <Text style={styles.cardSubtitle}>
-                Sarjana Teknik Informatika
-              </Text>
-              <Text style={styles.cardDesc}>
-                Lulus dengan predikat Cum Laude. Fokus skripsi pada pengembangan
-                aplikasi mobile edukatif berbasis gamifikasi.
-              </Text>
-            </View>
-          </View>
-
-          <View style={styles.timelineItem}>
-            <View style={styles.timelineIcon}>
-              <Ionicons name="book" size={16} color="#5B5FEF" />
-            </View>
-            <View style={styles.card}>
-              <View style={styles.cardHeader}>
-                <View style={styles.tagNeutral}>
-                  <Text style={styles.tagNeutralText}>SMA</Text>
-                </View>
-                <Text style={styles.yearText}>2016 - 2019</Text>
-              </View>
-              <Text style={styles.cardTitle}>SMA Negeri 1 Jakarta</Text>
-              <Text style={styles.cardSubtitle}>Jurusan IPA (Sains)</Text>
-              <Text style={styles.cardDesc}>
-                Aktif dalam ekstrakurikuler Robotika dan OSIS. Menjuarai
-                Olimpiade Matematika tingkat kota.
-              </Text>
-            </View>
-          </View>
-
-          <View style={styles.timelineItem}>
-            <View style={styles.timelineIcon}>
-              <Ionicons name="create" size={16} color="#5B5FEF" />
-            </View>
-            <View style={styles.card}>
-              <View style={styles.cardHeader}>
-                <View style={styles.tagNeutral}>
-                  <Text style={styles.tagNeutralText}>SMP</Text>
-                </View>
-                <Text style={styles.yearText}>2013 - 2016</Text>
-              </View>
-              <Text style={styles.cardTitle}>SMP Negeri 45</Text>
-              <Text style={styles.cardDesc}>
-                Pengembangan minat awal dalam teknologi komputer dan desain
-                grafis. Anggota klub Pramuka.
-              </Text>
-            </View>
-          </View>
-
-          <View style={styles.timelineItem}>
-            <View style={styles.timelineIcon}>
-              <Ionicons name="clipboard" size={16} color="#5B5FEF" />
-            </View>
-            <View style={styles.card}>
-              <View style={styles.cardHeader}>
-                <View style={styles.tagNeutral}>
-                  <Text style={styles.tagNeutralText}>SD</Text>
-                </View>
-                <Text style={styles.yearText}>2007 - 2013</Text>
-              </View>
-              <Text style={styles.cardTitle}>SD Negeri 02 Pagi</Text>
-              <Text style={styles.cardDesc}>
-                Pendidikan dasar. Berpartisipasi aktif dalam kegiatan olahraga
-                sekolah dan seni lukis.
-              </Text>
-            </View>
-          </View>
-        </View>
-
-        <Text style={styles.quoteText}>
-          "Pendidikan adalah tiket ke masa depan."
-        </Text>
-      </ScrollView>
-
-      <View style={styles.fab}>
-        <Ionicons name="school" size={20} color="#FFFFFF" />
-      </View>
       </SafeAreaView>
     </ScreenTransition>
   );
@@ -136,7 +132,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingHorizontal: 18,
     paddingTop: 16,
-    paddingBottom: 90,
+    paddingBottom: 128,
   },
   headerRow: {
     flexDirection: "row",

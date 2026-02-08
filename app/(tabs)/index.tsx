@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import {
   Animated,
   Easing,
+  Image,
   Pressable,
   SafeAreaView,
   ScrollView,
@@ -16,6 +17,8 @@ const index = () => {
   const [isIdOpen, setIsIdOpen] = useState(false);
   const slideY = useRef(new Animated.Value(-600)).current;
   const overlayOpacity = useRef(new Animated.Value(0)).current;
+  const profileImage = require("../../assets/images/idcard/profile.jpg");
+  const idCardImage = require("../../assets/images/idcard/profile.jpg");
 
   const openIdCard = () => {
     setIsIdOpen(true);
@@ -61,91 +64,96 @@ const index = () => {
           contentContainerStyle={styles.contentContainer}
           showsVerticalScrollIndicator={false}
         >
-        <View style={styles.headerRow}>
-          <View>
-            <Text style={styles.greeting}>Selamat Datang,</Text>
-            <Text style={styles.name}>Awuy, Kharis Neville </Text>
+          <View style={styles.headerRow}>
+            <View>
+              <Text style={styles.greeting}>Selamat Datang,</Text>
+              <Text style={styles.name}>Awuy, Kharis Neville </Text>
+            </View>
+            <View style={styles.avatar}>
+              <Image source={profileImage} style={styles.avatarImage} />
+            </View>
           </View>
-          <View style={styles.avatar}>
-            <Ionicons name="person" size={22} color="#5B5FEF" />
-          </View>
-        </View>
 
-        <View style={styles.heroCard}>
-          <View style={styles.statusPill}>
-            <View style={styles.statusDot} />
-            <Text style={styles.statusText}>Active Student</Text>
+          <View style={styles.heroCard}>
+            <View style={styles.statusPill}>
+              <View style={styles.statusDot} />
+              <Text style={styles.statusText}>Active Student</Text>
+            </View>
+            <Text style={styles.heroTitle}>Student Profile{"\n"}App</Text>
+            <Text style={styles.heroText}>
+              You guys can see little about my college information and my
+              academic records, personal information, and student achievements
+              so far.
+            </Text>
+            <Pressable onPress={openIdCard} style={styles.heroButton}>
+              <Text style={styles.heroButtonText}>View ID Card</Text>
+            </Pressable>
           </View>
-          <Text style={styles.heroTitle}>Student Identity{"\n"}Hub</Text>
-          <Text style={styles.heroText}>
-            Access your academic records, personal information, and student
-            achievements.
-          </Text>
-          <Pressable onPress={openIdCard} style={styles.heroButton}>
-            <Text style={styles.heroButtonText}>View ID Card</Text>
-          </Pressable>
-        </View>
 
-        <Text style={styles.sectionTitle}>Menu Utama</Text>
+          <Text style={styles.sectionTitle}>Menu Utama</Text>
 
-        <View style={styles.menuCard}>
-          <View style={styles.menuIconWrap}>
-            <Ionicons name="person-outline" size={22} color="#5B5FEF" />
+          <View style={styles.menuCard}>
+            <View style={styles.menuIconWrap}>
+              <Ionicons name="person-outline" size={22} color="#5B5FEF" />
+            </View>
+            <View style={styles.menuTextWrap}>
+              <Text style={styles.menuTitle}>Data Diri</Text>
+              <Text style={styles.menuSubtitle}>
+                Informasi pribadi & kontak
+              </Text>
+            </View>
           </View>
-          <View style={styles.menuTextWrap}>
-            <Text style={styles.menuTitle}>Data Diri</Text>
-            <Text style={styles.menuSubtitle}>Informasi pribadi & kontak</Text>
-          </View>
-        </View>
 
-        <View style={styles.menuCard}>
-          <View style={styles.menuIconWrap}>
-            <Ionicons name="school-outline" size={22} color="#5B5FEF" />
+          <View style={styles.menuCard}>
+            <View style={styles.menuIconWrap}>
+              <Ionicons name="school-outline" size={22} color="#5B5FEF" />
+            </View>
+            <View style={styles.menuTextWrap}>
+              <Text style={styles.menuTitle}>Pendidikan</Text>
+              <Text style={styles.menuSubtitle}>Riwayat akademik & nilai</Text>
+            </View>
           </View>
-          <View style={styles.menuTextWrap}>
-            <Text style={styles.menuTitle}>Pendidikan</Text>
-            <Text style={styles.menuSubtitle}>Riwayat akademik & nilai</Text>
-          </View>
-        </View>
 
-        <View style={styles.menuCard}>
-          <View style={styles.menuIconWrap}>
-            <Ionicons name="briefcase-outline" size={22} color="#5B5FEF" />
+          <View style={styles.menuCard}>
+            <View style={styles.menuIconWrap}>
+              <Ionicons name="briefcase-outline" size={22} color="#5B5FEF" />
+            </View>
+            <View style={styles.menuTextWrap}>
+              <Text style={styles.menuTitle}>Pengalaman</Text>
+              <Text style={styles.menuSubtitle}>
+                Pengalaman kerja & kepanitiaan organisasi
+              </Text>
+            </View>
           </View>
-          <View style={styles.menuTextWrap}>
-            <Text style={styles.menuTitle}>Pengalaman</Text>
-            <Text style={styles.menuSubtitle}>Organisasi & kepanitiaan</Text>
-          </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
 
         {isIdOpen && (
           <View style={styles.idOverlayWrap} pointerEvents="box-none">
-          <Pressable style={styles.idOverlay} onPress={closeIdCard}>
+            <Pressable style={styles.idOverlay} onPress={closeIdCard}>
+              <Animated.View
+                style={[styles.idOverlayDim, { opacity: overlayOpacity }]}
+              />
+            </Pressable>
             <Animated.View
-              style={[styles.idOverlayDim, { opacity: overlayOpacity }]}
-            />
-          </Pressable>
-          <Animated.View
-            style={[
-              styles.idCardSheet,
-              { transform: [{ translateY: slideY }] },
-            ]}
-          >
-            <View style={styles.idCardHeader}>
-              <Text style={styles.idCardTitle}>ID Card Mahasiswa</Text>
-              <Pressable onPress={closeIdCard} style={styles.idCloseBtn}>
-                <Ionicons name="close" size={18} color="#111827" />
-              </Pressable>
-            </View>
-            <View style={styles.idCardImage}>
-              <Text style={styles.idCardPlaceholder}>TEMPAT FOTO ID CARD</Text>
-            </View>
-            <Text style={styles.idCardHint}>
-              Ganti area ini dengan gambar ID card kamu.
-            </Text>
-          </Animated.View>
-        </View>
+              style={[
+                styles.idCardSheet,
+                { transform: [{ translateY: slideY }] },
+              ]}
+            >
+              <View style={styles.idCardHeader}>
+                <Text style={styles.idCardTitle}>ID Card Mahasiswa</Text>
+                <Pressable onPress={closeIdCard} style={styles.idCloseBtn}>
+                  <Ionicons name="close" size={18} color="#111827" />
+                </Pressable>
+              </View>
+              <View style={styles.idCardImage}>
+                <Image source={idCardImage} style={styles.idCardImageContent} />
+              </View>
+              <Text style={styles.idCardHint}>
+                Ganti area ini dengan gambar ID card kamu.
+              </Text>
+            </Animated.View>
+          </View>
         )}
       </SafeAreaView>
     </ScreenTransition>
@@ -165,7 +173,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingHorizontal: 20,
     paddingTop: 22,
-    paddingBottom: 110,
+    paddingBottom: 128,
     gap: 18,
   },
   headerRow: {
@@ -194,6 +202,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.08,
     shadowRadius: 8,
     elevation: 4,
+    overflow: "hidden",
+  },
+  avatarImage: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
   },
   heroCard: {
     backgroundColor: "#5B5FEF",
@@ -340,6 +354,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#F9FAFB",
     alignItems: "center",
     justifyContent: "center",
+    overflow: "hidden",
+  },
+  idCardImageContent: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
   },
   idCardPlaceholder: {
     fontSize: 12,

@@ -22,7 +22,9 @@ const experience = () => {
             <Pressable style={styles.topBarAction}>
               <Ionicons name="arrow-back" size={22} color="#111827" />
             </Pressable>
-            <Text style={styles.topBarTitle}>Pengalaman Mahasiswa</Text>
+            <Text style={styles.topBarTitle}>
+              Pengalaman Kerja dan Kepanitiaan
+            </Text>
             <View style={styles.topBarAction} />
           </View>
 
@@ -35,56 +37,28 @@ const experience = () => {
               </View>
               <View style={styles.card}>
                 <View style={styles.cardHeader}>
-                  <Text style={styles.cardTitle}>UI/UX Designer Intern</Text>
+                  <Text style={styles.cardTitle}>Palin Enak</Text>
                   <View style={styles.badgeBlue}>
-                    <Text style={styles.badgeBlueText}>AKTIF</Text>
+                    <Text style={styles.badgeBlueText}>2023-2024</Text>
                   </View>
-                </View>
-                <View style={styles.metaRow}>
-                  <Ionicons name="business" size={14} color="#94A3B8" />
-                  <Text style={styles.metaText}>Startup Indo Tech</Text>
                 </View>
                 <View style={styles.divider} />
                 <Text style={styles.cardDesc}>
-                  Bertanggung jawab membuat desain antarmuka aplikasi mobile dan
-                  melakukan riset pengguna sederhana.
+                  Usaha makanan ringan berupa mochi yang saya buat dengan teman
+                  saya. Dimana saya membantu teman saya menjalankan usaha ini di
+                  bagian penyediaan bahan, produksi, hingga pemasaran produk ke
+                  konsumen.
                 </Text>
                 <View style={styles.tagRow}>
                   <View style={styles.tagPill}>
-                    <Text style={styles.tagText}>Figma</Text>
-                  </View>
-                  <View style={styles.tagPill}>
-                    <Text style={styles.tagText}>Prototyping</Text>
+                    <Text style={styles.tagText}>FnB</Text>
                   </View>
                 </View>
-              </View>
-            </View>
-
-            <View style={styles.timelineItem}>
-              <View style={styles.timelineIcon}>
-                <Ionicons name="brush" size={16} color="#5B5FEF" />
-              </View>
-              <View style={styles.card}>
-                <View style={styles.cardHeader}>
-                  <Text style={styles.cardTitle}>
-                    Freelance Graphic Designer
-                  </Text>
-                  <Text style={styles.yearText}>2022 - 2023</Text>
-                </View>
-                <View style={styles.metaRow}>
-                  <Ionicons name="brush" size={14} color="#94A3B8" />
-                  <Text style={styles.metaText}>Remote Projects</Text>
-                </View>
-                <View style={styles.divider} />
-                <Text style={styles.cardDesc}>
-                  Mengerjakan proyek branding dan materi pemasaran media sosial
-                  untuk berbagai klien UMKM.
-                </Text>
               </View>
             </View>
           </View>
 
-          <Text style={styles.sectionTitle}>Organisasi Kampus</Text>
+          <Text style={styles.sectionTitle}>Organisasi Sekolah</Text>
           <View style={styles.timelineWrap}>
             <View style={styles.timelineLine} />
             <View style={styles.timelineItem}>
@@ -93,63 +67,22 @@ const experience = () => {
               </View>
               <View style={styles.card}>
                 <View style={styles.cardHeader}>
-                  <Text style={styles.cardTitle}>Ketua Divisi Kreatif</Text>
+                  <Text style={styles.cardTitle}>
+                    Panitia Utama Penamatan SMA Angkatan
+                  </Text>
                   <View style={styles.badgeGreen}>
-                    <Text style={styles.badgeGreenText}>PERIODE 2023</Text>
+                    <Text style={styles.badgeGreenText}>PERIODE 2022</Text>
                   </View>
                 </View>
                 <View style={styles.metaRow}>
                   <Ionicons name="people" size={14} color="#94A3B8" />
-                  <Text style={styles.metaText}>BEM Fakultas Teknik</Text>
+                  <Text style={styles.metaText}>Panitia Penamatan</Text>
                 </View>
                 <View style={styles.divider} />
                 <Text style={styles.cardDesc}>
-                  Mengkoordinir tim untuk publikasi acara tahunan fakultas dan
-                  mengelola media sosial organisasi.
-                </Text>
-              </View>
-            </View>
-
-            <View style={styles.timelineItem}>
-              <View style={styles.timelineIcon}>
-                <Ionicons name="code-slash" size={16} color="#5B5FEF" />
-              </View>
-              <View style={styles.card}>
-                <View style={styles.cardHeader}>
-                  <Text style={styles.cardTitle}>Anggota Aktif</Text>
-                  <Text style={styles.yearText}>2022 - Sekarang</Text>
-                </View>
-                <View style={styles.metaRow}>
-                  <Ionicons name="code-slash" size={14} color="#94A3B8" />
-                  <Text style={styles.metaText}>
-                    Himpunan Mahasiswa Informatika
-                  </Text>
-                </View>
-                <View style={styles.divider} />
-                <Text style={styles.cardDesc}>
-                  Berpartisipasi dalam workshop pemrograman dan menjadi panitia
-                  perlombaan hackathon internal.
-                </Text>
-              </View>
-            </View>
-
-            <View style={styles.timelineItem}>
-              <View style={styles.timelineIcon}>
-                <Ionicons name="school" size={16} color="#5B5FEF" />
-              </View>
-              <View style={styles.card}>
-                <View style={styles.cardHeader}>
-                  <Text style={styles.cardTitle}>Volunteer Pengajar</Text>
-                  <Text style={styles.yearText}>2021</Text>
-                </View>
-                <View style={styles.metaRow}>
-                  <Ionicons name="school" size={14} color="#94A3B8" />
-                  <Text style={styles.metaText}>Gerakan Mengajar Desa</Text>
-                </View>
-                <View style={styles.divider} />
-                <Text style={styles.cardDesc}>
-                  Mengajar dasar-dasar komputer dan literasi digital kepada
-                  anak-anak di desa binaan.
+                  Salah satu pelopor agar penamatan terlaksana dan mengkoordinir
+                  tim untuk mengadakan acara penamatan pertama setelah beberapa
+                  tahun tidak diadakan karena adanya pandemi covid-19.
                 </Text>
               </View>
             </View>
@@ -159,6 +92,10 @@ const experience = () => {
             <Ionicons name="add" size={18} color="#4F46E5" />
             <Text style={styles.addBtnText}>Tambah Pengalaman Baru</Text>
           </Pressable>
+
+          <Text style={styles.quoteText}>
+            "Pelajaran yang terbaik adalah pengalaman."
+          </Text>
         </ScrollView>
       </SafeAreaView>
     </ScreenTransition>
@@ -178,7 +115,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingHorizontal: 18,
     paddingTop: 10,
-    paddingBottom: 110,
+    paddingBottom: 128,
   },
   topBar: {
     flexDirection: "row",
@@ -202,6 +139,12 @@ const styles = StyleSheet.create({
     color: "#111827",
     marginTop: 14,
     marginBottom: 10,
+  },
+  quoteText: {
+    textAlign: "center",
+    color: "#A5B4FC",
+    fontStyle: "italic",
+    marginTop: 20,
   },
   timelineWrap: {
     position: "relative",
