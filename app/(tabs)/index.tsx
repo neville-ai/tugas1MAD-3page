@@ -149,9 +149,6 @@ const index = () => {
               <View style={styles.idCardImage}>
                 <Image source={idCardImage} style={styles.idCardImageContent} />
               </View>
-              <Text style={styles.idCardHint}>
-                Ganti area ini dengan gambar ID card kamu.
-              </Text>
             </Animated.View>
           </View>
         )}
