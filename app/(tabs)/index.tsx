@@ -168,9 +168,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   contentContainer: {
-    paddingHorizontal: 20,
-    paddingTop: 22,
-    paddingBottom: 128,
+    paddingHorizontal: 28,
+    paddingTop: 40,
+    paddingBottom: 144,
     gap: 18,
   },
   headerRow: {

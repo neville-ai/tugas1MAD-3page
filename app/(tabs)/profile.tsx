@@ -172,9 +172,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   contentContainer: {
-    paddingHorizontal: 18,
-    paddingTop: 10,
-    paddingBottom: 128,
+    paddingHorizontal: 26,
+    paddingTop: 40,
+    paddingBottom: 144,
   },
   topBar: {
     flexDirection: "row",
